@@ -1,6 +1,6 @@
 BOX_NAMESPACE=mcandre
 BOX_BASENAME=vagrant-centos-cpp
-BOX=vagrant-centos-cpp.box
+BOX=$(BASENAME).box
 
 .PHONY: launch-vm clean-vm clean-boxes clean-vagrant-metadata
 

@@ -2,14 +2,26 @@
 
 # VAGRANT CLOUD
 
-https://app.vagrantup.com/mcandre/boxes/vagrant-centos-cpp
+https://app.vagrantup.com/mcandre/boxes/vagrant-centos-cpp-amd64
+https://app.vagrantup.com/mcandre/boxes/vagrant-centos-cpp-i386
 
 # EXAMPLE
 
+## amd64
+
 ```console
-$ cd test
+$ cd amd64/test
 $ vagrant up
 $ vagrant ssh -c "cd /vagrant && clang++ -o hello hello.cpp && ./hello"
+Hello World!
+```
+
+## i386
+
+```console
+$ cd amd64/test
+$ vagrant up
+$ vagrant ssh -c "cd /vagrant && g++ -o hello hello.cpp && ./hello"
 Hello World!
 ```
 
@@ -31,5 +43,6 @@ Hello World!
 # EXPORT
 
 ```console
-$ make vagrant-centos-cpp.box
+$ sh -c "cd amd64 && make vagrant-centos-cpp-amd64.box"
+$ sh -c "cd i386 && make vagrant-centos-cpp-i386.box"
 ```
